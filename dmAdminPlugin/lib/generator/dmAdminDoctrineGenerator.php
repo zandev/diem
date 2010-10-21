@@ -219,7 +219,7 @@ class dmAdminDoctrineGenerator extends sfDoctrineGenerator
     }
     else
     {
-      $html = 'htmlentities(dmString::truncate('.$html.', '.$field->getConfig('truncate', sfConfig::get('dm_admin_list_truncate', 120)).'), ENT_COMPAT, \'UTF-8\')';
+      $html = 'htmlentities(dmString::truncate(__('.$html.'), '.$field->getConfig('truncate', sfConfig::get('dm_admin_list_truncate', 120)).'), ENT_COMPAT, \'UTF-8\')';
       
       if ($this->module->getTable()->isMarkdownColumn($fieldName))
       {
